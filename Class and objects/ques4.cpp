@@ -1,12 +1,24 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    double length, width, area;
-    cout << "Enter the length and width of the rectangle (separated by a space): ";
-    cin >> length >> width;
-    area = length * width;
-    cout << "The area of the rectangle is: " << area << " square units." << endl;
+class Car {
+  private:
+    string brand;
+    int year;
 
-    return 0;
+  public:
+    Car(string b, int y) {
+      brand = b;
+      year = y;
+    }
+
+    void displayInfo() {
+      cout << "Brand: " << brand << ", Year: " << year << endl;
+    }
+};
+
+int main() {
+  Car myCar("Toyota", 2020);
+  myCar.displayInfo();
+  return 0;
 }
